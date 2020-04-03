@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module>
+  <id>VirtoCommerce.Easypay</id>
+  <version>0.2.0</version>
+  <platformVersion>2.12.0</platformVersion>
+  <dependencies>
+    <dependency id="VirtoCommerce.Core" version="2.17.0" />
+  </dependencies>
+
+  <title>Easypay Payments</title>
+  <description>Easypay gateway integration</description>
+  <authors>
+    <author>Miguel Hasse de Oliveira</author>
+  </authors>
+  <owners>
+    <owner>Hasseware</owner>
+  </owners>
+  <projectUrl></projectUrl>
+  <iconUrl>Modules/$(VirtoCommerce.Easypay)/Content/logo.png</iconUrl>
+  <releaseNotes>First version.</releaseNotes>
+  <copyright>Copyright © 2016 Miguel Hasse de Oliveira. All rights reserved</copyright>
+  <tags>easypay bankcard payment gateway</tags>
+
+  <assemblyFile>VirtoCommerce.Easypay.Web.dll</assemblyFile>
+  <moduleType>VirtoCommerce.Easypay.Module, VirtoCommerce.Easypay.Web</moduleType>
+
+  <settings>
+    <group name="Payment methods|Easypay">
+      <setting>
+        <name>Easypay.Sandbox</name>
+        <valueType>boolean</valueType>
+        <defaultValue>false</defaultValue>
+        <title>Use Sandbox</title>
+        <description>Switch to sandbox working mode</description>
+      </setting>
+      <setting>
+        <name>Easypay.SplitPayments</name>
+        <valueType>boolean</valueType>
+        <defaultValue>false</defaultValue>
+        <title>Use Payment Splits</title>
+        <description>Split payments into vendor accounts</description>
+      </setting>
+      <setting>
+        <name>Easypay.Payment.ClientID</name>
+        <valueType>integer</valueType>
+        <title>Payment CID</title>
+        <description>Payments Client Identification Number</description>
+      </setting>
+      <setting>
+        <name>Easypay.Payment.Username</name>
+        <valueType>string</valueType>
+        <title>Payment Username</title>
+        <description>Payments Client Username</description>
+      </setting>
+      <setting>
+        <name>Easypay.Payment.EntityID</name>
+        <valueType>integer</valueType>
+        <defaultValue>10611</defaultValue>
+        <title>Payment Entity</title>
+        <description>Payments Client Entity Number</description>
+      </setting>
+      <setting>
+        <name>Easypay.Account.ClientID</name>
+        <valueType>integer</valueType>
+        <title>Account CID</title>
+        <description>Account Client Identification Number</description>
+      </setting>
+      <setting>
+        <name>Easypay.Account.Username</name>
+        <valueType>string</valueType>
+        <title>Account Username</title>
+        <description>Account Client Username</description>
+      </setting>
+      <setting>
+        <name>Easypay.Account.EntityID</name>
+        <valueType>integer</valueType>
+        <title>Account Entity</title>
+        <description>Account Client Entity Number</description>
+      </setting>
+      <setting>
+        <name>Easypay.Country</name>
+        <valueType>string</valueType>
+        <allowedValues>
+          <value>PT</value>
+          <value>GB</value>
+          <value>FR</value>
+          <value>ES</value>
+        </allowedValues>
+        <defaultValue>PT</defaultValue>
+        <title>Country</title>
+        <description>Client Country</description>
+      </setting>
+      <setting>
+        <name>Easypay.AuthenticationKey</name>
+        <valueType>string</valueType>
+        <title>Authentication Code</title>
+        <description>Merchant authentication code</description>
+      </setting>
+    </group>
+  </settings>
+</module>
